@@ -1,0 +1,30 @@
+[project]
+name = "energy-demand-forecasting"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "chris", email = "49312736+d4rkning@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "entsoe-py>=0.8.1",
+    "holidays>=0.108",
+    "lightgbm>=4.7.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "pandas>=3.1.1",
+    "pyarrow>=26.0.1",
+    "pytest>=9.2.0",
+    "python-dotenv>=1.2.4",
+    "requests>=2.34.2",
+    "ruff>=0.17.4",
+    "scikit-learn>=1.9.1",
+]
+
+[project.scripts]
+energy-demand-forecasting = "energy_demand_forecasting:main"
+
+[build-system]
+requires = ["uv_build>=0.12.24,<0.13.0"]
+build-backend = "uv_build"
