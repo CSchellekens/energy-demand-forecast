@@ -1,7 +1,7 @@
 [project]
 name = "energy-demand-forecasting"
 version = "0.1.0"
-description = "Add your description here"
+description = "Het voorspellen van de energie behoefte op een locatie."
 readme = "README.md"
 authors = [
     { name = "chris", email = "49312736+d4rkning@users.noreply.github.com" }
@@ -15,10 +15,8 @@ dependencies = [
     "numpy>=2.5.4",
     "pandas>=3.1.1",
     "pyarrow>=26.0.1",
-    "pytest>=9.2.0",
     "python-dotenv>=1.2.4",
     "requests>=2.34.2",
-    "ruff>=0.17.4",
     "scikit-learn>=1.9.1",
 ]
 
@@ -45,10 +43,13 @@ dev = [
     "pandas-stubs>=3.1.0.261029",
     "pre-commit>=4.7.0",
     "pytest>=9.2.0",
+    "ruff>=0.17.4",
 ]
 
 [tool.mypy]
 python_version = "3.12"
+mypy_path = "src"
+explicit_package_bases = true
 files = ["src", "tests"]
 strict = false
 disallow_untyped_defs = true

@@ -1,4 +1,4 @@
-"""Herbruikbare API-client voor het abstraheren van API calls. Contract-achtig idee."""
+"""Herbruikbare API-client voor het abstraheren van API calls."""
 
 from dataclasses import dataclass, field
 from typing import Any
@@ -14,6 +14,11 @@ class ApiClient:
     default_params: dict[str, Any] = field(default_factory=dict)
     timeout: float = 60.0
     session: requests.Session = field(default_factory=requests.Session)
+
+    def _url(self, path: str) -> str:
+        if path.startswith(("http://", "https://")):
+            return path
+        return f"{self.base_url.rstrip('/')}/{path.lstrip('/')}" if path else self.base_url
 
     def get(self, path: str = "", **params: Any) -> Any:
         url = f"{self.base_url.rstrip('/')}/{path.lstrip('/')}" if path else self.base_url

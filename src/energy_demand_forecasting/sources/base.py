@@ -1,5 +1,5 @@
 """Abstracte base class voor het implementeren van
-verschillende datasrouces die een gedeelde pipeline hebben."""
+verschillende datasources die een gedeelde pipeline hebben."""
 
 from abc import ABC, abstractmethod
 from typing import Any
@@ -36,4 +36,4 @@ class DataSource(ABC):
 
     @abstractmethod
     def _to_frame(self, raw: Any) -> pd.DataFrame:
-        """Abstracte prive methode om de gedownloaden data omtezetten naar een dataframe"""
+        """Abstracte prive methode om de gedownloaden data om te zetten naar een dataframe"""
