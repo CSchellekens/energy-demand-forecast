@@ -21,7 +21,7 @@ class ApiClient:
         return f"{self.base_url.rstrip('/')}/{path.lstrip('/')}" if path else self.base_url
 
     def get(self, path: str = "", **params: Any) -> Any:
-        url = f"{self.base_url.rstrip('/')}/{path.lstrip('/')}" if path else self.base_url
+        url = self._url(path)
         response = self.session.get(
             url, params={**self.default_params, **params}, timeout=self.timeout
         )
@@ -29,7 +29,7 @@ class ApiClient:
         return response.json()
 
     def post(self, path: str = "", json: Any = None) -> Any:
-        url = f"{self.base_url.rstrip('/')}/{path.lstrip('/')}" if path else self.base_url
+        url = self._url(path)
         response = self.session.post(url, json=json, timeout=self.timeout)
         response.raise_for_status()
         return response.json()
