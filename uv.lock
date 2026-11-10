@@ -379,6 +379,7 @@ dev = [
     { name = "mypy" },
     { name = "pandas-stubs" },
     { name = "pre-commit" },
+    { name = "pytest" },
 ]
 
 [package.metadata]
@@ -402,6 +403,7 @@ dev = [
     { name = "mypy", specifier = ">=2.4.1" },
     { name = "pandas-stubs", specifier = ">=3.1.0.261029" },
     { name = "pre-commit", specifier = ">=4.7.0" },
+    { name = "pytest", specifier = ">=9.2.0" },
 ]
 
 [[package]]
