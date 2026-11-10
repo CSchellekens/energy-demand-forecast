@@ -1,14 +1,37 @@
-# Python-generated files
+# Python
 __pycache__/
-*.py[oc]
+*.py[cod]
+*.egg-info/
 build/
 dist/
-wheels/
-*.egg-info
 
-# Virtual environments
-.venv
+# Omgeving en geheimen
+.venv/
 .env
 
+# Tools
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Data, modellen en uitvoer
 data/
-.mypy_cache
+models/
+*.parquet
+*.pkl
+*.joblib
+mlruns/
+
+# Lokaal testen
+scratch.py
+
+# Editor en systeem
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
