@@ -1,4 +1,4 @@
 # Energy demand forecasting
-![CI](https://github.com/d4rkning/energy-demand-forecast/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/CSchellekens/energy-demand-forecast/actions/workflows/ci.yml/badge.svg)
 
-Forecasting pipeline voor energievoorspelling in Nederland m.b.v. open data. 
+Forecasting pipeline voor energie vraag voorspelling in Nederland m.b.v. open data. 

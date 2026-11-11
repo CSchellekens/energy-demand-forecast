@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Het voorspellen van de energie behoefte op een locatie."
 readme = "README.md"
 authors = [
-    { name = "chris", email = "49312736+d4rkning@users.noreply.github.com" }
+    { name = "chris Schellekens", email = "49312736+CSchellekens@users.noreply.github.com" }
 ]
 requires-python = ">=3.12"
 dependencies = [
