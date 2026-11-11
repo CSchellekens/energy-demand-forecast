@@ -9,8 +9,6 @@ ARCHIVE_URL = "https://archive-api.open-meteo.com/v1/archive"
 
 
 class OpenMeteoTemperature(DataSource):
-    name = "temperature"
-
     def __init__(self, latitude: float = 52.10, longitude: float = 5.18) -> None:
         self.name = f"temperature_{latitude}_{longitude}"
         self.client = ApiClient(
