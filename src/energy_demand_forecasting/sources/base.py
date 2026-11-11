@@ -21,14 +21,16 @@ def validate(df: pd.DataFrame, name: str) -> pd.DataFrame:
 
 
 class DataSource(ABC):
-    """Abstracten data classen om te beschrijven wat er moet gebeuren voor elke data bron."""
+    """Abstracten om te beschrijven wat er moet gebeuren voor elke data bron."""
 
     name: str
 
     def fetch(self, start: str, end: str) -> pd.DataFrame:
         raw = self._download(start, end)
         df = self._to_frame(raw)
-        return validate(df, self.name)
+        lo = pd.Timestamp(start, tz="UTC")
+        hi = pd.Timestamp(end, tz="UTC")
+        return df.loc[(df.index >= lo) & (df.index < hi)]
 
     @abstractmethod
     def _download(self, start: str, end: str) -> Any:
